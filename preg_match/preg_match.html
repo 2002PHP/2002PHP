@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./preg_match.php" method="post">
+        姓名： <input type="text" name="u_name" placeholder="请输入用户名"> <br>
+        密码： <input type="password" name="u_pass" placeholder="请输入密码"> <br>
+        确认： <input type="password" name="u_pass1" placeholder="再次输入密码"> <br>
+        Email: <input type="email"name="u_email" placeholder="请输入您的邮箱"><br>
+            <textarea name="u_info"  cols="30" rows="10"></textarea><br>
+        请选择：<select name="u_class" >
+                <option value="0">请选择</option>
+                <option value="1">PHP</option>
+                <option value="2">Java</option>
+                <option value="3">Python</option>
+            </select>
+            <input type="hidden" name="u_id" value="1234"> <br><br>
+            <input type="submit" value="提交">
+            <input type="reset" value="重置">
+        </form>
+        
+</body>
+</html>
