@@ -2,6 +2,7 @@
     // 删除
     include "db.php"; // 链接数据库
     $userid = intval($_GET['id']);
+    var_dump($userid);die();
     $sql = "delete from login_history where userid=$userid";
     $arr = mysqli_query($link,$sql);
     if ($arr){

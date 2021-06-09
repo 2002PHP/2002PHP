@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>成绩单</title>
+</head>
+<body>
+    <form action="./student.php" method="post">
+        <table border="1">
+            <tr>
+                <td>学生姓名</td>
+                <td><input type="text" name="uname"></td>
+            </tr>
+            <tr>
+                <td>学生年龄</td>
+                <td><input type="text"name="uage"></td>
+            </tr>
+            <tr>
+                <td>学生班级</td>
+                <td><select name="sel" id="">
+                    <option name="" value="2102phpA">2102phpA</option>
+                    <option name="" value="2103phpA">2103phpA</option>
+                    <option name="" value="2104phpA">2104phpA</option>
+                    <option name="" value="2105phpA">2105phpA</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td>学生成绩</td>
+                <td><input type="text" name="uclass"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="添加"></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

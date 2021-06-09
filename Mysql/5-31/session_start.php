@@ -7,7 +7,8 @@
         $username = $_SESSION['username'];
         echo "你好 {$username} [{$_COOKIE['userid']}], 欢迎回来";
     }else{
-        echo "请先登录";
+        echo "请先登录两秒后跳转到登录";
+        header('Refresh:2;url=login.php');die;
     }
     // 将用户信展示到页面
     $cid = $_COOKIE['userid'];
@@ -16,8 +17,8 @@
 //    //查询
     $arr = mysqli_query($link,$sql);
     $add = mysqli_fetch_all($arr,MYSQLI_ASSOC);
+    echo "<pre>";print_r($add);echo"</pre>";die();
     ?>
-
     <a href="quit.php">
         点击退出
     </a>
