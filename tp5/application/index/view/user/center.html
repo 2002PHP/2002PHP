@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+</head>
+<body>
+<h2>个人中心</h2>
+<p> 欢迎:  {$name}   | <a href="/us/logout">退出登录</a> </p>
+<p> Email: {$eamil} </p>
+<p>登录时间： {$time}</p>
+<h1>我的预订</h1>
+<table border="1">
+    <tr>
+        <td>座位号</td>
+        <td>预定时间</td>
+    </tr>
+    {foreach $state as $k => $v}
+    <tr>
+        <td>{$v.sord}</td>
+        <td>{$v.time}</td>
+    </tr>
+    {/foreach}
+</table>
+<!--<ul>-->
+<!--    {foreach $history as $key=>$vo }-->
+<!--    <li> {$vo.his_id}  +  {$vo.login_time} + {$vo.login_ip} + {$vo.login_ua}</li>-->
+<!--    {/foreach}-->
+<!--</ul>-->
+<table border="1">
+    {foreach $history as $key => $vo}
+        <tr>
+            <td>{$vo.his_id}</td>
+            <td>{$vo.login_time}</td>
+            <td>{$vo.login_ip}</td>
+            <td>{$vo.login_ua}</td>
+            <td>
+                <a href="/us/mov/{$vo.id}">删除</a>
+            </td>
+        </tr>
+    {/foreach}
+    <a href="/mov/movieScore">电影评分</a><br>
+    <a href="/prize/prize">抽奖活动</a><br>
+    <a href="/cust/cust">我的预定</a><br>
+</table>
+</body>
+</html>

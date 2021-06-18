@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影表</title>
+</head>
+<body>
+<h2>请给喜欢的电影打分(满分100)</h2>
+<hr>
+<form action="/mov/movs" method="post">
+<table border="1">
+    <tr>
+        <td>电影ID</td>
+        <td>电影名</td>
+        <td>分数</td>
+    </tr>
+    {foreach $arr as $k => $v}
+    <tr>
+        <td>{$v.id}</td>
+        <td>{$v.movie_name}-- 平均评分:[{$v.score}] </td>
+        <td>
+            <input type="text" name="num[{$v.id}]" placeholder="您的分数">
+        </td>
+    </tr>
+    {/foreach}
+    <tr>
+        <td></td>
+        <td>
+            <input type="submit" value="提交评分">
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

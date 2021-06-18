@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订座</title>
+    <style>
+        .div{
+            width: 500px;
+            height: 300px;
+            border: 1px solid darkred;
+        }
+        li{
+            width: 100px;
+            height: 100px;
+            border: #000088 1px solid;
+            float: left;
+            margin: 10px;
+            background: #006666;
+            display: block;
+            text-align: center;
+            line-height: 100px;
+        }
+        .name{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        {foreach $arr as $k=>$v}
+        {if $v.state == "已"}
+        <li class="name">{$k+1}
+            {if $v.state == "已"}
+                "已预定"
+            {/if}
+        </li>
+        {else}
+        <li>{$k+1}</li>
+        {/if}
+        {/foreach}
+    </div>
+    <form action="/cust/custs" method="post">
+        请选择座位号: <input type="text" name="del">
+        <input type="submit" value="提交"><br>
+    </form>
+    <form action="/cust/custsdelete" method="post">
+        请要取消的座位号: <input type="text" name="de">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

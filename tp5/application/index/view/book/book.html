@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>book</title>
+</head>
+<body>
+<form action="/book/book" method="post">
+    <table border="1">
+        <tr>
+            <td>图书名称</td>
+            <td><input type="text" name="uname"></td>
+        </tr>
+        <tr>
+            <td>价格</td>
+            <td><input type="text" name="price"></td>
+        </tr>
+        <tr>
+            <td>数量</td>
+            <td><input type="text" name="amount"></td>
+        </tr>
+        <tr>
+            <td>是否上架</td>
+            <td>
+                是<input type="radio" name="shi" value="是">
+                否<input type="radio" name="shi" value="否">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="添加"></td>
+            <td></td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>
