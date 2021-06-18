@@ -35,6 +35,6 @@ class Info extends Controller
            ->field('user_id,avg(order_status)')
            ->group('user_id,order_status')->select();
        echo "<pre>";print_r($add);echo"</pre>"; */
-      
+
    }
 }
